@@ -30,7 +30,7 @@ export class UsersService {
         return this.userModel.findOne({ username }).exec();
       }
     async findByUserId(id: string): Promise<User | null>{
-        return this.userModel.findOne({ id}).exec();
+        return this.userModel.findOne({ _id : id}).exec();
     }
 
     async findUsers(): Promise<User[]>{
